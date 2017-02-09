@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
     apache2 \
     php7.0 php7.0-mysql php7.0-curl libapache2-mod-php php-bcmath php7.0-gd php7.0-intl php7.0-mbstring php7.0-xml php7.0-soap php7.0-xsl php7.0-mcrypt php7.0-zip && \
     rm -rf /var/lib/apt/lists/* && \
-    a2enmod php7.0 && a2enmod rewrite
+    a2enmod php7.0 && a2enmod rewrite && a2enmod headers && a2enmod expires
 
 # Define working directory.
 WORKDIR /
